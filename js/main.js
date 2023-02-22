@@ -13,14 +13,14 @@ sconto over 65: 40%
 */
 
 let kilometri = parseInt(prompt("inserisci il numero dei Km da percorrere"));
-let età = parseInt(prompt("inserisci la tua età"));
+let eta = parseInt(prompt("inserisci la tua età"));
 
 let minorenne = 18;
 let over = 65;
 
 const prezzoPerKm = 0.21;
 
-const prezzoIntero = kilometri*prezzoPerKm .toFixed(2);
+const prezzoIntero = kilometri * prezzoPerKm;
 
 const scontoMinorenni = (prezzoIntero / 100) * 20;
 const totaleMinorenni = prezzoIntero - scontoMinorenni;
@@ -28,21 +28,23 @@ const totaleMinorenni = prezzoIntero - scontoMinorenni;
 const scontoOver = (prezzoIntero / 100) * 40;
 const totaleOver = prezzoIntero - scontoOver;
 
-if (età < minorenne) {
+if (eta < minorenne) {
+  
+  document.getElementById("discount20").innerHTML =  `Hai diritto ad uno sconto del 20% sul prezzo iniziale. Il tuo totale è di ${totaleMinorenni.toFixed(2) }€! Buon Viaggio!`
+  
+} else if (eta > over){
+    document.getElementById("discount40").innerHTML =  `Hai diritto ad uno sconto del 20% sul prezzo iniziale. Il tuo totale è di ${totaleOver.toFixed(2) }€! Buon Viaggio!`
   
 
-
-} else if (età > over){
-    console.log ("Il cliente ha diritto allo sconto Over");
+} else{
+  document.getElementById("standard_price").innerHTML = `"Il totale del tuo biglietto è di ${prezzoIntero.toFixed(2) }€! Buon Viaggio!`
+ 
 }
 
 
 
 
 
-console.log (kilometri);
-console.log (età);
-console.log (prezzoIntero);
 
 
 
