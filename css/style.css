@@ -5,11 +5,16 @@ body{
 }
 
 .ms_text{
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
     transition: background-color , color 1s;
 }
 
 .ms_text:hover{
-    background-color: blue;
+    background-color: rgb(9, 108, 189);
     color: white;
+}
+
+.fa-face-laugh-wink{
+    font-size: 30px;
+    color: yellow;
 }
