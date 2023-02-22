@@ -1,5 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2020/06/19/15/17/train-station-5317775__480.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ms_text{
+    background-color: yellow;
+    transition: background-color , color 1s;
+}
+
+.ms_text:hover{
+    background-color: blue;
+    color: white;
 }
